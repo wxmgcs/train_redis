@@ -1,0 +1,16 @@
+
+----- testCreateUserAndStatus -----
+
+----- testFollowUnfollowUser -----
+
+----- testSyndicateStatus -----
+
+----- testRefillTimeline -----
+Exception in thread "main" java.lang.IndexOutOfBoundsException: toIndex = 5
+	at java.util.ArrayList.subListRangeCheck(ArrayList.java:1004)
+	at java.util.ArrayList.subList(ArrayList.java:996)
+	at main.java.Chapter08.refillTimeline(Chapter08.java:461)
+	at main.java.Chapter08.refillTimeline(Chapter08.java:432)
+	at main.java.Chapter08.testRefillTimeline(Chapter08.java:131)
+	at main.java.Chapter08.run(Chapter08.java:37)
+	at main.java.Chapter08.main(Chapter08.java:18)

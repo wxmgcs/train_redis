@@ -1,0 +1,34 @@
+
+----- testListItem -----
+We need to set up just enough state so that a user can list an item
+The user's inventory has:
+  itemX
+
+Listing the item...
+Listing the item succeeded? true
+The market contains:
+  itemX.userX, 10.0
+
+----- testPurchaseItem -----
+We need to set up just enough state so that a user can list an item
+The user's inventory has:
+  itemX
+
+Listing the item...
+Listing the item succeeded? true
+The market contains:
+  itemX.userX, 10.0
+We need to set up just enough state so a user can buy an item
+The user has some money:
+  funds: 125
+
+Let's purchase an item
+Purchasing an item succeeded? true
+Their money is now:
+  funds: 115
+Their inventory is now:
+  itemX
+
+----- testBenchmarkUpdate -----
+updateToken 22909 5 4581
+updateTokenPipeline 306776 5 61355

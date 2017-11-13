@@ -1,0 +1,44 @@
+
+----- testLoginCookies -----
+We just logged-in/updated token: e5653a1d-8076-4585-b2c8-779dc6414941
+For user: 'username'
+
+What username do we get when we look-up that token?
+username
+
+Let's drop the maximum number of cookies to 0 to clean them out
+We will start a thread to do the cleaning, while we stop it later
+The current number of sessions still available is: 0
+
+----- testShopppingCartCookies -----
+We'll refresh our session...
+And add an item to the shopping cart
+Our shopping cart currently has:
+  itemY: 3
+
+Let's clean out our sessions and carts
+Our shopping cart now contains:
+
+----- testCacheRows -----
+First, let's schedule caching of itemX every 5 seconds
+Our schedule looks like:
+  itemX, 1.510586472E9
+We'll start a caching thread that will cache the data...
+Our cached data looks like:
+{"id":"itemX","data":"data to cache...","time":1510586472}
+
+We'll check again in 5 seconds...
+Notice that the data has changed...
+{"id":"itemX","data":"data to cache...","time":1510586477}
+
+Let's force un-caching
+The cache was cleared? true
+
+----- testCacheRequest -----
+We are going to cache a simple request against http://test.com/?item=itemX
+We got initial content:
+content for http://test.com/?item=itemX
+
+To test that we've cached the request, we'll pass a bad callback
+We ended up getting the same response!
+content for http://test.com/?item=itemX

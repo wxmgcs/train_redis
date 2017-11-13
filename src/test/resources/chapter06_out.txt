@@ -1,0 +1,111 @@
+
+----- testAddUpdateContact -----
+Let's add a few contacts...
+Current recently contacted contacts
+  contact-3-9
+  contact-2-8
+  contact-2-7
+  contact-2-6
+  contact-1-5
+  contact-1-4
+  contact-1-3
+  contact-0-2
+  contact-0-1
+  contact-0-0
+
+Let's pull one of the older ones up to the front
+New top-3 contacts:
+  contact-1-4
+  contact-3-9
+  contact-2-8
+
+Let's remove a contact...
+New contacts:
+  contact-1-4
+  contact-3-9
+  contact-2-8
+  contact-2-7
+  contact-1-5
+  contact-1-3
+  contact-0-2
+  contact-0-1
+  contact-0-0
+
+And let's finally autocomplete on 
+
+----- testAddressBookAutocomplete -----
+the start/end range of 'abc' is: [abb{, abc{]
+
+Let's add a few people to the guild
+
+now let's try to find users with names starting with 'je':
+[jeff, jennifer, jenny]
+jeff just left to join a different guild...
+[jennifer, jenny]
+
+----- testDistributedLocking -----
+Getting an initial lock...
+Got it!
+Trying to get it again without releasing the first one...
+Failed to get it!
+
+Waiting for the lock to timeout...
+Getting the lock again...
+Got it!
+Releasing the lock...
+Released it...
+
+Acquiring it again...
+Got it!
+
+----- testCountingSemaphore -----
+Getting 3 initial semaphores with a limit of 3...
+Done!
+Getting one more that should fail...
+Couldn't get it!
+
+Lets's wait for some of them to time out
+Can we get one?
+Got one!
+Let's release it...
+Released!
+
+And let's make sure we can get 3 more!
+We got them!
+
+----- testDelayedTasks -----
+Let's start some regular and delayed tasks...
+How many non-delayed tasks are there (should be 2)? 0
+
+Let's start up a thread to bring those delayed tasks back...
+Started.
+Let's wait for those tasks to be prepared...
+Waiting is over, how many tasks do we have (should be 4)? 0
+
+----- testMultiRecipientMessaging -----
+Let's create a new chat session with some recipients...
+Now let's send a few messages...
+
+And let's get the messages that are waiting for jeff and jenny...
+They are the same? true
+Those messages are:
+  chatId: 1
+    messages:
+      {sender=joe, id=1, message=message 1, ts=1.510587126168E12}
+      {sender=joe, id=2, message=message 2, ts=1.51058712624E12}
+      {sender=joe, id=3, message=message 3, ts=1.51058712624E12}
+      {sender=joe, id=4, message=message 4, ts=1.510587126242E12}
+
+----- testFileDistribution -----
+Creating some temporary 'log' files...
+Done.
+
+Starting up a thread to copy logs to redis...
+Let's pause to let some logs get copied to Redis...
+
+Okay, the logs should be ready. Let's process them!
+Files should have 1, 100, and 1000 lines
+[1, 100, 1000]
+
+Let's wait for the copy thread to finish cleaning up...
+Done cleaning out Redis!
